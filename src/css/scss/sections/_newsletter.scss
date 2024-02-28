@@ -1,0 +1,76 @@
+#newsletter {
+    padding: 2rem 0;
+    .container {
+        border-radius: 1rem;
+        background-color: $gray-100;
+        margin: 0 auto;
+        padding: 0 1rem;
+
+        .content {
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+
+            @include lg {
+                padding: 4rem;
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .form-newsletter {
+                .newsletter-form {
+                    display: flex;
+                    
+                    .input-wrapper {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        flex: 1;
+                        border: 1px solid $gray-500;
+                        background-color: white;
+                        border-radius: 5px 0 0 5px;
+                        padding: 3px;
+
+                        .email-icon {
+                            position: absolute; 
+                            left: 10px; 
+                            color: $gray-500; 
+                            z-index: 10; 
+                          }
+
+                          input[type="email"] {
+                            flex: 1;
+                            padding: 0.5rem;
+                            padding-left: 2rem; 
+                            border: none;
+                            border-radius: 5px 0 0 5px;
+                      
+                            &:focus {
+                              outline: none;
+                            }
+                          }
+
+                          .error-message {
+                            color: $danger; // Change the color as needed
+                            position: absolute; // Absolute position within the wrapper
+                            bottom: -20px; // Adjust the value to move the message below the input
+                            left: 0; // Align to the left of the wrapper
+                            right: 0; // Align to the right of the wrapper
+                            text-align: center; // Center the error message
+                            @include text-s;
+                            // You can add padding if necessary
+                        }
+                        }
+                    button {
+                        padding: 0.5rem 1rem;
+                        border-radius: 0 5px 5px 0;
+                  }
+                }
+            }
+        }
+    }
+}

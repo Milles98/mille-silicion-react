@@ -1,0 +1,157 @@
+.footer {
+    background-color: $gray-900;
+    color: $gray-400;
+    padding: 2rem;
+    font-family: $font-manrope;
+    @include text-s;
+  
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      @include lg {
+        display: grid;
+        grid-template-columns: 2.5fr 1fr 1fr 1fr;
+        gap: 1rem;
+        flex-direction: row;
+        align-items: start;
+        text-align: left;
+      }
+  
+      .footer-branding {
+        margin-bottom: 2rem;
+
+        @include lg {
+          grid-column: 1 / 2;
+          margin-right: 100px;
+          margin-bottom: 0;
+        }
+        .footer-logo {
+          margin-bottom: 1rem;
+        }
+  
+        p {
+          color: rgba($white, 0.7);
+          margin-bottom: 2.5rem;
+        }
+  
+        .newsletter {
+          width: 100%;
+
+            .newsletter-title {
+              @include text-m; 
+              color: $white;
+              margin-bottom: 0.5rem; 
+            }
+          
+            .newsletter-form {
+                display: flex;
+                flex-direction: column;
+
+                @include lg {
+                  flex-direction: row;
+                }
+              
+                .input-wrapper {
+                  position: relative; 
+                  display: flex;
+                  align-items: center;
+                  flex: 1;
+                  background-color: $gray-900;
+                  border: 1px solid $gray-800;
+                  border-radius: 5px 0 0 5px;
+                  padding: 3px;
+              
+                  .email-icon {
+                    position: absolute; 
+                    left: 10px;
+                    color: $gray-600; 
+                    z-index: 10; 
+                  }
+              
+                  input[type="email"] {
+                    flex: 1;
+                    padding: 0.5rem;
+                    padding-left: 2rem; 
+                    background-color: $gray-900;
+                    border: none;
+                    border-radius: 5px 0 0 5px;
+                    color: $white;
+              
+                    &:focus {
+                      outline: none;
+                    }
+                  }
+                }
+              
+                button {
+                  padding: 0.5rem;
+                  border-radius: 5px;
+
+                  @include lg {
+                    padding: 0.5rem 1rem;
+                    border-radius: 0 5px 5px 0;
+                  }
+                }
+              }
+          }
+  
+        .copyright {
+          @include text-xs;
+          color: rgba($white, 0.5);
+          margin-top: 3rem;
+        }
+      }
+  
+      .footer-nav,
+      .footer-social {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 2rem;
+
+        @include lg {
+          margin-bottom: 0;
+        }
+
+        ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+  
+          li {
+            margin-bottom: 0.5rem;
+  
+            a {
+              color: $gray-400;
+              text-decoration: none;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+  
+      .footer-contact {
+        p {
+          @include standard-text;
+          color: $primary;
+          text-decoration: none;
+          transition: all 0.25s ease-in-out;
+          display: inline-block;
+          
+          &:hover {
+              text-decoration: underline;
+          }
+          }
+
+        h5 {
+            @include h6;
+            color: $white;
+        }
+      }
+    }
+  }

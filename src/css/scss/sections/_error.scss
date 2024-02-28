@@ -1,0 +1,30 @@
+.bg-color {
+    background-image: url('../../images/ooops-side/background.svg');
+}
+
+#ooops {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - footer-height);
+    margin-top: 8rem;
+
+    .ooops-center {
+        text-align: center;
+    }
+
+    .btn-theme {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+    }
+}
+
+// Footer
+footer.ooops-footer {
+    p {
+      color: $gray-600; 
+      @include text-xs;
+    }
+  }

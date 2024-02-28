@@ -1,0 +1,172 @@
+#make-your-money {
+  padding: 1rem; 
+  margin-top: 40px;
+
+  @include lg {
+    padding: 2rem 0;
+    margin-top: 75px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+    max-width: 100%; 
+    margin: 0 auto;
+
+    @include lg {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+  }
+
+  .card {
+    padding: 1rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+    @include lg {
+      padding: 1.5rem;
+    }
+
+    &.top-left {
+      button.btn-theme {
+        margin-top: 1.5rem;
+      }
+
+      h2 {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &.bottom-right {
+
+      .info-container {
+        flex-direction: column; // Stack elements vertically
+        align-items: center;
+
+        @include lg {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .info-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include lg {
+          align-items: flex-start;
+        }
+
+        .icon {
+          width: 64px;
+          height: 64px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 1rem;
+          margin-top: 1rem;
+        }
+
+        p {
+          margin-top: 1rem;
+        }
+      }
+
+      button.btn-theme {
+        align-self: center;
+        margin-top: 1rem;
+
+        @include lg {
+          align-self: flex-start;
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    &.top-right, &.bottom-left {
+      position: relative;
+
+      .money-forecast {
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    img:first-child {
+      width: 100%;
+      height: auto;
+    }
+
+    .send-money-to {
+      display: none;
+
+      @include lg {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+      }
+    }
+
+    .visa-card {
+      position: absolute;
+      right: -5%;
+      top: 56%;
+      transform: translateY(-50%);
+      width: 70%;
+      height: 70%;
+
+      
+    }
+
+    &:nth-child(odd) {
+      align-items: flex-start;
+    }
+
+    &:nth-child(even) {
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+    }
+
+    h2 {
+      text-align: center;
+
+      @include lg {
+        @include h2;
+        margin-bottom: 1rem;
+        text-align: start;
+      }
+    }
+
+    p {
+      text-align: center;
+
+      @include lg {
+        display: flex;
+        align-items: center;
+        text-align: start;
+        margin-bottom: 0.5rem;
+      }
+
+      i {
+        color: $primary;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+#how-does-it-work {
+    background-color: $gray-100;
+    padding: 1rem 0; 
+    margin-top: 40px;
+
+    @include lg {
+        padding: 2rem 0;
+        margin-top: 75px;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .how-it-works-header {
+        margin-top: 30px;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @include lg {
+            margin-top: 30px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            @include h1;
+        }
+    }
+
+    .slider-container {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
+        position: relative;
+        @include shadow-m;
+
+        @include lg {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            position: relative;
+            @include shadow-m;
+        }
+
+        .how-it-works-navigation {
+            display: none;
+
+            @include lg {
+                display: flex;
+                position: absolute;
+                background-color: white;
+                border-radius: 50%;
+                width: 3rem; 
+                height: 3rem; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                z-index: 10;
+            }
+
+            &.left-nav {
+                @include lg {
+                    left: 0;
+                }
+            }
+
+            &.right-nav {
+                @include lg {
+                    right: 0;
+                }
+            }
+
+            i {
+                color: $gray-800;
+                font-size: 13px;
+            }
+        }
+
+        .phone-images {
+            display: flex;
+            flex-direction: row; 
+            justify-content: center;
+            align-items: center;
+            width: 100%; 
+            overflow: hidden;
+
+            @include lg {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 80%; 
+                max-width: 1200px; 
+            }
+
+            .how-it-works-img-1 {
+                display: none;
+                @include lg {
+                    display: block;
+                    opacity: 0.8;
+                }
+            }
+
+            .how-it-works-img-2 {
+                display: none;
+                @include lg {
+                    display: block;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    .how-it-works-bottom {
+        margin-top: 15px;
+        text-align: center;
+
+        @include lg {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        h3 {
+            @include h4;
+        }
+
+        p {
+            @include text-m;
+            color: $gray-700;
+        }
+    }
+}
+
+

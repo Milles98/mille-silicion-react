@@ -1,0 +1,79 @@
+.footer-home {
+    padding: 40px 0;
+    font-family: 'Helvetica Neue', sans-serif; 
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; 
+
+        .footer-logo {
+            margin-bottom: 30px;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-bottom: 30px;
+            a {
+                text-decoration: none;
+                color: $gray-800;
+                &:hover {
+                    color: #555; 
+                }
+            }
+        }
+
+        .app-stores {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            padding: 20px 20px 0 20px;
+
+            i {
+                background-color: $gray-200;
+                color: $gray-800;
+                padding: 15px;
+                border-radius: 5px;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: darken($color: $gray-300, $amount: 10%);
+                }
+            }
+        }
+        // .social-links {
+        //     display: flex;
+        //     justify-content: center;
+        //     gap: 20px; 
+        //     font-size: 24px;
+        //     i {
+        //         cursor: pointer;
+        //         &:hover {
+        //             color: #555; 
+        //         }
+        //     }
+        // }
+    }
+
+    .copyright-text {
+        text-align: center;
+        @include text-s;
+        color: $gray-600;
+        margin-bottom: 0;
+        margin-top: 3rem;
+    }
+}
