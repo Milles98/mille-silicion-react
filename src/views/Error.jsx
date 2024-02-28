@@ -1,9 +1,12 @@
 import React from 'react'
+import ErrorBody from './sections/ErrorBody'
+import ErrorFooter from './sections/ErrorFooter'
 
 const Error = () => {
   return (
     <main>
-        Error
+        <ErrorBody />
+        <ErrorFooter />
     </main>
   )
 }
