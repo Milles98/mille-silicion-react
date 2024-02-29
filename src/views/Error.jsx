@@ -4,10 +4,12 @@ import ErrorFooter from './sections/ErrorFooter'
 
 const Error = () => {
   return (
-    <main>
+    <div className="wrapper">
+      <main>
         <ErrorBody />
         <ErrorFooter />
-    </main>
+      </main>
+    </div>
   )
 }
 

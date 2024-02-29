@@ -81,21 +81,21 @@ const DarkFooter = () => {
         <nav className="footer-nav">
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/clients">Our Clients</Link></li>
-            <li><Link to="/testimonials">Testimonials</Link></li>
+            <li><Link to="/error">Services</Link></li>
+            <li><Link to="/error">Our Clients</Link></li>
+            <li><Link to="/error">Testimonials</Link></li>
             <li><Link to="/news">News</Link></li>
             <br />
-            <li><Link to="/terms">Terms & Conditions</Link></li>
-            <li><Link to="/privacy">Privacy Policy</Link></li>
+            <li><Link to="/error">Terms & Conditions</Link></li>
+            <li><Link to="/error">Privacy Policy</Link></li>
           </ul>
         </nav>
         <nav className="footer-social">
           <ul>
-            <li><Link to="/facebook">Facebook</Link></li>
-            <li><Link to="/linkedin">LinkedIn</Link></li>
-            <li><Link to="/twitter">Twitter</Link></li>
-            <li><Link to="/instagram">Instagram</Link></li>
+            <li><Link to="/error">Facebook</Link></li>
+            <li><Link to="/error">LinkedIn</Link></li>
+            <li><Link to="/error">Twitter</Link></li>
+            <li><Link to="/error">Instagram</Link></li>
           </ul>
         </nav>
         <div className="footer-contact">

@@ -12,11 +12,11 @@ const FooterHome = () => {
             <img src={Silicon_Logo_Light} alt="Silicon Logo" className="footer-logo"/>
     
             <nav className="footer-nav">
-                <NavLink className="nav-link" to="#">Overview</NavLink>
-                <NavLink className="nav-link" to="#">Features</NavLink>
-                <NavLink className="nav-link" to="#">News</NavLink>
-                <NavLink className="nav-link" to="#">Contact</NavLink>
-                <NavLink className="nav-link" to="#">Account</NavLink>
+                <NavLink className="nav-link" to="/">Overview</NavLink>
+                <NavLink className="nav-link" to="/">Features</NavLink>
+                <NavLink className="nav-link" to="/news">News</NavLink>
+                <NavLink className="nav-link" to="/contact">Contact</NavLink>
+                <NavLink className="nav-link" to="/error">Account</NavLink>
             </nav>
     
             <div className="app-stores">

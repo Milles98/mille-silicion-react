@@ -7,12 +7,12 @@ const Header = () => {
     <header>
       <div className="container">
         <Link id="logo" to="/">
-          <img src={Logo} alt="silicon logotype"/>
-          </Link>
+          <img src={Logo} alt="silicon logotype" />
+        </Link>
 
         <nav id="menu">
           <div className="menu-links">
-            <NavLink className="nav-link" to="/error">Overview</NavLink>
+            <NavLink className="nav-link" to="/">Overview</NavLink>
             <NavLink className="nav-link" to="/#features">Features</NavLink>
             <NavLink className="nav-link" to="/news">News</NavLink>
             <NavLink className="nav-link" to="/contact">Contact</NavLink>

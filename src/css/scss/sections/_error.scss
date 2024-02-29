@@ -1,30 +1,44 @@
-.bg-color {
-    background-image: url('../../images/ooops-side/background.svg');
-}
+// Define the height of your footer if you know it
+$footer-height: 60px; // Adjust this value to the actual height of your footer
 
-#ooops {
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 85vh;
+  background-image: url('../../images/ooops-side/background.svg'); // Assuming you want this bg for the whole page
+
+  main {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - footer-height);
     margin-top: 8rem;
+  }
 
-    .ooops-center {
-        text-align: center;
-    }
+  .ooops-center {
+    text-align: center;
+  }
 
-    .btn-theme {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 10px 20px;
-    }
-}
+  .btn-theme {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+  }
 
-// Footer
-footer.ooops-footer {
+  // Footer styles here
+  footer.ooops-footer {
+    margin-top: auto; // This pushes the footer to the bottom
+    padding: 20px 0; // Adjust padding as needed
+
     p {
       color: $gray-600; 
       @include text-xs;
     }
   }
+}
+
+// Ensure the #ooops ID is only for the specific content and not used for layout purposes
+#ooops {
+  // Content-specific styles here
+}
