@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom'
 import Logo from '../../images/logo/silicon-logo-light_theme.svg'
 
 const Header = () => {
+
+  // State to manage whether the menu is shown or not
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+
+  // Function to toggle menu visibility
+  const toggleMenu = () => {
+    setIsMenuVisible(!isMenuVisible);
+  };
+
+  const handleNavLinkClick = () => {
+    if (isMenuVisible) {
+      setIsMenuVisible(false);
+    }
+  };
+
   return (
     <header>
       <div className="container">
@@ -10,12 +25,12 @@ const Header = () => {
           <img src={Logo} alt="silicon logotype" />
         </Link>
 
-        <nav id="menu">
+        <nav id="menu" style={{ display: isMenuVisible ? 'block' : 'none' }}>
           <div className="menu-links">
-            <NavLink className="nav-link" to="/">Overview</NavLink>
-            <NavLink className="nav-link" to="/#features">Features</NavLink>
-            <NavLink className="nav-link" to="/news">News</NavLink>
-            <NavLink className="nav-link" to="/contact">Contact</NavLink>
+            <NavLink className="nav-link" to="/" onClick={handleNavLinkClick}>Overview</NavLink>
+            <NavLink className="nav-link" to="/#features" onClick={handleNavLinkClick}>Features</NavLink>
+            <NavLink className="nav-link" to="/news" onClick={handleNavLinkClick}>News</NavLink>
+            <NavLink className="nav-link" to="/contact" onClick={handleNavLinkClick}>Contact</NavLink>
           </div>
         </nav>
 
@@ -30,9 +45,13 @@ const Header = () => {
           </div>
         </div>
 
-        <a id="btn-account" className="btn btn-theme" to="/signin"><i className="fa-regular fa-user"></i> Sign in / up</a>
+        <Link id="btn-account" className="btn btn-theme" to="/signin">
+          <i className="fa-regular fa-user"></i> Sign in / up
+        </Link>
 
-        <button id="btn-menu"> <i className="fa-regular fa-bars"></i> </button>
+        <button id="btn-menu" onClick={toggleMenu}> 
+          <i className="fa-regular fa-bars"></i> 
+        </button>
       </div>
     </header>
   )

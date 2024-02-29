@@ -1,0 +1,103 @@
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 2rem;
+    margin: auto;
+
+    .news-card {
+        @include shadow-m;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        border-radius: 1rem;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        margin-bottom: 1rem;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .news-content {
+            padding: 1rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .news-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .news-category {
+                background-color: $gray-200;
+                color: $gray-800;
+                font-weight: bold;
+                padding: 0 0.6rem;
+                border-radius: 5px;
+                display: inline-block;
+                margin-bottom: 0.5rem;
+            }
+
+            .news-title {
+                @include h5;
+                color: $gray-800;
+                margin-bottom: 0.5rem 0;
+            }
+
+            .news-date {
+                color: $gray-600;
+                @include text-s;
+            }
+        }
+
+        .news-footer {
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid $gray-300;
+            position: relative;
+
+            .news-author {
+                color: $gray-900;
+                font-weight: bold;
+                margin-left: 1rem;
+                padding-left: 1.5rem;
+            }
+
+            .profile-image {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+
+        .bookmark-icon {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: $white;
+            border-radius: 50%;
+            padding: 0.5rem;
+            cursor: pointer;
+            width: 2rem; // Set a fixed width
+            height: 2rem; // Set a fixed height to match the width
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box; // Include padding in width and height
+          }
+          
+    }
+}

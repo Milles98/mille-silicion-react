@@ -1,0 +1,19 @@
+.breadcrumb-container {
+    padding: 2rem;
+  }
+  
+  .location p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Creates a gap between icons and text */
+    margin-bottom: 3rem;
+  }
+  
+  .location a {
+    margin-left: 0.5rem; /* Add some space before the link */
+    text-decoration: none;
+    color: #007bff; /* Adjust the link color as needed */
+  }
+  
+  /* Add additional styling for the icons if needed */
+  

@@ -1,8 +1,17 @@
 import React from 'react'
+import NewsDontMissAnything from './sections/NewsDontMissAnything'
+import DarkFooter from './sections/DarkFooter'
+import NewsCard from './sections/NewsCard'
+import NewsTop from './sections/NewsTop'
 
 const News = () => {
   return (
-    <div>News</div>
+    <main>
+      <NewsTop />
+      <NewsCard />
+      <NewsDontMissAnything />
+      <DarkFooter />
+    </main>
   )
 }
 
