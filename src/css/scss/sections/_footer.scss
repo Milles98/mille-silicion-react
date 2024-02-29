@@ -40,6 +40,10 @@
         .newsletter {
           width: 100%;
 
+          .error-message {
+            color: $red;
+          }
+
             .newsletter-title {
               @include text-m; 
               color: $white;

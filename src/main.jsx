@@ -7,6 +7,8 @@ import Header from './views/sections/Header';
 import Footer from './views/sections/Footer';
 import Home from './views/Home';
 import Error from './views/Error';
+import Contact from './views/Contact';
+import News from './views/News';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -17,6 +19,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="*" element={<Error />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/news" element={<News />} />
           </Routes>
         <Footer />
       </div>

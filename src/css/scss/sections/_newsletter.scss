@@ -22,6 +22,11 @@
             }
 
             .form-newsletter {
+
+                .error-message {
+                    color: $red;
+                }
+
                 .newsletter-form {
                     display: flex;
                     

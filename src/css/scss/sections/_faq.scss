@@ -1,151 +1,162 @@
 #faq {
-      display: block;
-      padding: 3rem 1rem;
+    display: block;
+    padding: 3rem 1rem;
 
-      @include lg {
+    @include lg {
         padding: 7rem 0;
-      }
+    }
 
-      .container {
-          .faq-grid {
-              display: grid;
-              grid-template-columns: 1fr; 
-              gap: 4rem;
+    .container {
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
 
-              @include lg {
+            @include lg {
                 grid-template-columns: 1fr 2fr;
                 gap: 9rem;
-              }
+            }
 
-              .information-bottom-left-side {
-                  display: flex;
-                  flex-direction: column;
+            .information-bottom-left-side {
+                display: flex;
+                flex-direction: column;
 
-                  h2 {
-                      @include h2;
-                      margin-bottom: 1rem;
-                      text-align: center;
+                h2 {
+                    @include h2;
+                    margin-bottom: 1rem;
+                    text-align: center;
 
-                      @include lg {
+                    @include lg {
                         text-align: start;
-                      }
-                  }
+                    }
+                }
 
-                  p.get-in-touch {
-                      color: $gray-700;
-                      @include text-lg;
-                      margin-bottom: 2.5rem;
-                      text-align: center;
+                p.get-in-touch {
+                    color: $gray-700;
+                    @include text-lg;
+                    margin-bottom: 2.5rem;
+                    text-align: center;
 
-                      @include lg {
+                    @include lg {
                         text-align: start;
-                      }
-                  }
+                    }
+                }
 
-                  .contact-options {
-                      display: flex;
-                      flex-direction: column;
-                      justify-content: center;
-                      gap: 2rem;
+                .contact-options {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 2rem;
 
-                      @include lg {
+                    @include lg {
                         flex-direction: row;
-                      }
+                    }
 
-                      > div {
-                          padding: 1rem;
-                          border: 1px solid $gray-300;
-                          border-radius: 12px;
-                          display: flex;
-                          flex-direction: column;
-                          align-items: flex-start;
-                          gap: 0.5rem;
+                    >div {
+                        padding: 1rem;
+                        border: 1px solid $gray-300;
+                        border-radius: 12px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 0.5rem;
 
-                          p {
-                              @include text-s;
-                          }
-                      }
+                        p {
+                            @include text-s;
+                        }
+                    }
 
-                      .have-questions {
-                          i {
-                              color: $primary;
-                          }
-                          .fa-phone-volume {
-                              font-size: 1.5rem;
-                          }
-                      }
+                    .have-questions {
+                        i {
+                            color: $primary;
+                        }
 
-                      .phone-calls {
-                          i, a {
-                              color: $success;
-                          }
+                        .fa-phone-volume {
+                            font-size: 1.5rem;
+                        }
+                    }
 
-                          .fa-comment-dots {
-                              font-size: 1.5rem;
-                          }
-                      }
-                  }
-              }
+                    .phone-calls {
 
-              .dropdowns {
-                  .card {
-                      border: none;
-                      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
-                      border-radius: 8px;
-                      overflow: hidden;
-                      margin-bottom: 1rem;
+                        i,
+                        a {
+                            color: $success;
+                        }
 
-                      .heading {
-                          display: flex;
-                          justify-content: space-between;
-                          align-items: center;
-                          padding: 1rem;
-                          cursor: pointer;
+                        .fa-comment-dots {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
 
-                          button {
-                              background: none;
-                              border: none;
-                              font-size: 1rem;
-                              text-align: left;
-                              cursor: pointer;
-                              width: 100%;
-                              display: flex;
-                              justify-content: space-between;
-                              align-items: center;
-                              color: $gray-900;
-                              font-weight: bold;
-                          }
+            .dropdowns {
+                .card {
+                    border: none;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+                    border-radius: 8px;
+                    overflow: hidden;
+                    margin-bottom: 1rem;
 
-                          i {
-                              position: absolute;
-                              right: 10px;
-                              height: 36px;
-                              width: 36px;
-                              background-color: #F3F6FF;
-                              display: flex;
-                              justify-content: center;
-                              align-items: center;
-                              border-radius: 50%;
-                          }
+                    .heading {
+                        position: relative; // Add this line
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 1rem;
+                        cursor: pointer;
 
-                          i.active {
-                              background-color: $primary;
-                              color: white;
-                          }
-                      }
+                        button {
+                            background: none;
+                            border: none;
+                            font-size: 1rem;
+                            text-align: left;
+                            cursor: pointer;
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            color: $gray-900;
+                            font-weight: bold;
+                        }
 
-                      .dropdown-content {
-                          padding: 1rem;
-                          display: none;
-                          background: white;
-                          color: $gray-900;
+                        i {
+                            position: absolute;
+                            right: 1rem;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            height: 36px;
+                            width: 36px;
+                            background-color: #F3F6FF;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                        }
 
-                          p {
-                              color: $gray-900;
-                          }
-                      }
-                  }
-              }
-          }
-      }
+                        i.active {
+                            background-color: $primary;
+                            color: white;
+                        }
+                    }
+
+                    .dropdown-content {
+                        padding: 1rem;
+                        display: none;
+                        background: white;
+                        color: $gray-900;
+
+
+                        p {
+                            color: $gray-900;
+                        }
+                    }
+
+                    .dropdown-content.open {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
 }
