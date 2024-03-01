@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Error_Image from '../../images/ooops-side/404.svg'
+import Error_Image from '../../../images/ooops-side/404.svg'
 
 const ErrorBody = () => {
     return (

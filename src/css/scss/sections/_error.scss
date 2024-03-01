@@ -1,11 +1,10 @@
-// Define the height of your footer if you know it
-$footer-height: 60px; // Adjust this value to the actual height of your footer
+$footer-height: 60px;
 
 .wrapper-error {
   display: flex;
   flex-direction: column;
   min-height: 85vh;
-  background-image: url('../../images/ooops-side/background.svg'); // Assuming you want this bg for the whole page
+  background-image: url('../../images/ooops-side/backgroung-bg-error.svg');
 
   main {
     flex: 1;
@@ -26,19 +25,13 @@ $footer-height: 60px; // Adjust this value to the actual height of your footer
     padding: 10px 20px;
   }
 
-  // Footer styles here
   footer.ooops-footer {
-    margin-top: auto; // This pushes the footer to the bottom
-    padding: 20px 0; // Adjust padding as needed
+    margin-top: auto;
+    padding: 20px 0;
 
     p {
-      color: $gray-600; 
+      color: $gray-600;
       @include text-xs;
     }
   }
-}
-
-// Ensure the #ooops ID is only for the specific content and not used for layout purposes
-#ooops {
-  // Content-specific styles here
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Silicon_Logo_Light from '../../images/logo/silicon-logo-light_theme.svg'
-import Appstore from '../../images/appstore.svg'
-import Googleplay from '../../images/googleplay.svg'
+import Silicon_Logo_Light from '../../../images/logo/silicon-logo-light_theme.svg'
+import Appstore from '../../../images/appstore.svg'
+import Googleplay from '../../../images/googleplay.svg'
 
 
 const FooterHome = () => {

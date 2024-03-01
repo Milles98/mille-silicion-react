@@ -1,13 +1,13 @@
 import React from 'react'
-import Showcase from './sections/Showcase'
-import Brands from './sections/Brands'
-import Features from './sections/Features'
-import HowItWorks from './sections/HowItWorks'
-import MakeYourMoney from './sections/MakeYourMoney'
-import ClientsLoveApp from './sections/ClientsLoveApp'
-import Faq from './sections/Faq'
-import NewsLetter from './sections/NewsLetter'
-import FooterHome from './sections/FooterHome'
+import Showcase from './sections/Home/Showcase'
+import Brands from './sections/Home/Brands'
+import Features from './sections/Home/Features'
+import HowItWorks from './sections/Home/HowItWorks'
+import MakeYourMoney from './sections/Home/MakeYourMoney'
+import ClientsLoveApp from './sections/Home/ClientsLoveApp'
+import Faq from './sections/Home/Faq'
+import NewsLetter from './sections/Home/NewsLetter'
+import FooterHome from './sections/Home/FooterHome'
 
 const Home = () => {
   return (

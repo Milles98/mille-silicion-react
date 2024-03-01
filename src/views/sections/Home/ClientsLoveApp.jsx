@@ -1,9 +1,9 @@
 import React from 'react'
-import Quote from '../../images/clients-love-app/quotes.svg'
-import Rating_Left from '../../images/clients-love-app/rating-left.svg'
-import Image_1_Left from '../../images/clients-love-app/image-1-left.svg'
-import Rating_Right from '../../images/clients-love-app/rating-right.svg'
-import Image_2_Right from '../../images/clients-love-app/image-2-right.svg'
+import Quote from '../../../images/clients-love-app/quotes.svg'
+import Rating_Left from '../../../images/clients-love-app/rating-left.svg'
+import Image_1_Left from '../../../images/clients-love-app/image-1-left.svg'
+import Rating_Right from '../../../images/clients-love-app/rating-right.svg'
+import Image_2_Right from '../../../images/clients-love-app/image-2-right.svg'
 
 const ClientsLoveApp = () => {
   return (

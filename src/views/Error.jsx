@@ -1,6 +1,6 @@
 import React from 'react'
-import ErrorBody from './sections/ErrorBody'
-import ErrorFooter from './sections/ErrorFooter'
+import ErrorBody from './sections/Error/ErrorBody'
+import ErrorFooter from './sections/Error/ErrorFooter'
 
 const Error = () => {
   return (

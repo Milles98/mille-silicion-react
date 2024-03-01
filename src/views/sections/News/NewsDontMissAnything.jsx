@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Arrows from '../../images/news/arrows.svg';
+import Arrows from '../../../images/news/arrows.svg';
 
 const NewsDontMissAnything = () => {
   // State hooks for each newsletter type

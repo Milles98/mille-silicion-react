@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import AppstoreImage from '../../images/appstore.svg'
-import GoogleplayImage from '../../images/googleplay.svg'
-import ShowcaseMobilesImage from '../../images/showcase-mobiles.svg'
+import AppstoreImage from '../../../images/appstore.svg'
+import GoogleplayImage from '../../../images/googleplay.svg'
+import ShowcaseMobilesImage from '../../../images/showcase-mobiles.svg'
 
 const Showcase = () => {
     return (

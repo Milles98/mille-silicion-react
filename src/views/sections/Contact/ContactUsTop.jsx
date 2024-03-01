@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+// getbootstrap alerts / modal fixa för VG (istället för den fula popup typ "success")
+// https://getbootstrap.com/docs/4.0/components/alerts/
+// https://getbootstrap.com/docs/4.0/components/modal/
 const ContactUsTop = () => {
 
   const [formData, setFormData] = useState({
@@ -11,6 +14,20 @@ const ContactUsTop = () => {
     time: ''
   });
   const [errors, setErrors] = useState({});
+  const [specialists, setSpecialists] = useState([]);
+
+  useEffect(() => {
+    const fetchSpecialists = async () => {
+      try {
+        const response = await fetch('https://kyhnet23-assignment.azurewebsites.net/api/specialists');
+        const data = await response.json();
+        setSpecialists(data);
+      } catch (error) {
+        console.error('Failed to fetch specialists:', error);
+      }
+    };
+    fetchSpecialists();
+  }, []);
 
   const validateForm = () => {
     let newErrors = {};
@@ -118,10 +135,12 @@ const ContactUsTop = () => {
                 onChange={handleChange}
                 required
               >
-                <option value=""></option>
-                <option value=".NET">.NET</option>
-                <option value="C++">C++</option>
-                <option value="Java">Java</option>
+                <option value="">Select a specialist</option>
+                {specialists.map((specialist) => (
+                  <option key={specialist.id} value={specialist.id}>
+                    {specialist.firstName} {specialist.lastName}
+                  </option>
+                ))}
               </select>
               {errors.Specialist && <div className="error-message">{errors.Specialist}</div>}
             </div>

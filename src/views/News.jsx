@@ -1,8 +1,8 @@
 import React from 'react'
-import NewsDontMissAnything from './sections/NewsDontMissAnything'
+import NewsDontMissAnything from './sections/News/NewsDontMissAnything'
 import DarkFooter from './sections/DarkFooter'
-import NewsCard from './sections/NewsCard'
-import NewsTop from './sections/NewsTop'
+import NewsCard from './sections/News/NewsCard'
+import NewsTop from './sections/News/NewsTop'
 
 const News = () => {
   return (

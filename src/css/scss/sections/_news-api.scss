@@ -6,8 +6,8 @@
     margin: auto;
 
     .news-card {
-        @include shadow-m;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
         border-radius: 1rem;
@@ -25,6 +25,7 @@
         }
 
         .news-content {
+            position: relative;
             padding: 1rem;
             flex-grow: 1;
             display: flex;
@@ -54,7 +55,7 @@
             }
 
             .news-date {
-                color: $gray-600;
+                color: $gray-500;
                 @include text-s;
             }
         }
@@ -97,7 +98,7 @@
             justify-content: center;
             align-items: center;
             box-sizing: border-box; // Include padding in width and height
-          }
-          
+        }
+
     }
 }
