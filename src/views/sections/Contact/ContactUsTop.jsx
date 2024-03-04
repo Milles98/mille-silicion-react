@@ -135,7 +135,7 @@ const ContactUsTop = () => {
                 onChange={handleChange}
                 required
               >
-                <option value="">Select a specialist</option>
+                <option value=""></option>
                 {specialists.map((specialist) => (
                   <option key={specialist.id} value={specialist.id}>
                     {specialist.firstName} {specialist.lastName}

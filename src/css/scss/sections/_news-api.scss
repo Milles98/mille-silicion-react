@@ -1,9 +1,13 @@
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-gap: 1rem;
     padding: 2rem;
     margin: auto;
+
+    @include lg {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
     .news-card {
         position: relative;

@@ -21,9 +21,11 @@
     }
 
     @include text-s;
+
     p {
         color: $gray-600;
     }
+
     .fa-angles-right {
         margin: 0 10px;
 
@@ -32,6 +34,7 @@
             margin-right: 10px;
         }
     }
+
     a {
         color: $primary;
     }
@@ -51,6 +54,7 @@
         text-align: start;
         margin-top: 30px;
     }
+
     h1 {
         @include h1;
         text-align: center;
@@ -78,6 +82,7 @@
             @include lg {
                 margin-right: 1rem;
             }
+
             i {
                 position: relative;
                 transform: none;
@@ -95,8 +100,8 @@
 
     .contact-icon {
         display: flex;
-        align-items: center; 
-        justify-content: center; 
+        align-items: center;
+        justify-content: center;
         background-color: white;
         height: 3rem;
         width: 3rem;
@@ -105,6 +110,7 @@
         margin-bottom: 1rem;
         margin-right: 0.6rem;
         font-size: 1.3rem;
+
         i {
             transform: translate(-50%, -50%);
             position: relative;
@@ -112,7 +118,7 @@
             left: 50%;
         }
     }
-    
+
     h2 {
         @include h3;
         margin-top: 40px;
@@ -120,8 +126,8 @@
     }
 
     .online-consultation {
-        margin-top: 100px; 
-        box-shadow: none; 
+        margin-top: 100px;
+        box-shadow: none;
         padding: 20px;
         text-align: center;
         border-radius: 1rem;
@@ -134,9 +140,10 @@
         }
 
         button.btn-theme {
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             display: block;
             margin: 1rem auto;
+
             @include lg {
                 margin-top: 0;
                 margin-bottom: 0;
@@ -149,20 +156,26 @@
             margin-bottom: 20px;
         }
 
-        .form-group, .form-group-row {
+        .form-group,
+        .form-group-row {
             margin-bottom: 15px;
             width: 100%;
+            text-align: left;
 
             .error {
                 color: $red;
             }
 
             label {
+                margin-left: 11px;
+                font-weight: bold;
+                $color: $gray-900;
                 display: block;
                 margin-bottom: 5px;
             }
 
-            input, select {
+            input,
+            select {
                 width: calc(100% - 20px);
                 padding: 8px 10px;
                 margin: 0 10px;
@@ -188,7 +201,7 @@
 }
 
 .contact-page-content {
-    display: block; 
+    display: block;
     margin-top: 40px;
 
     @include lg {
@@ -200,8 +213,8 @@
     }
 
     .map-container {
-        height: auto; 
-        width: 100%; 
+        height: auto;
+        width: 100%;
         margin-bottom: 20px;
 
         @include lg {
@@ -210,8 +223,9 @@
             border-radius: 20px;
             height: 100%;
         }
+
         iframe {
-            width: 100%; 
+            width: 100%;
             height: auto;
 
             @include lg {
