@@ -19,11 +19,13 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      text-align: center;
       align-items: center;
       margin-bottom: 2rem;
       margin-top: 2rem;
 
       @include lg {
+        text-align: start;
         flex-direction: row;
         justify-content: start;
         margin-top: 4rem;
@@ -85,8 +87,10 @@
 
           .checkbox-container {
             display: flex;
+            white-space: nowrap;
             align-items: center;
             margin-bottom: 0.5rem;
+            color: $gray-700;
 
             // Ensuring the checkbox is the first element inline, followed by the label text
             input[type="checkbox"] {
@@ -103,6 +107,7 @@
       }
 
       .input-wrapper {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -115,9 +120,17 @@
           flex-direction: row;
         }
 
+        .email-icon {
+          position: absolute;
+          left: 10px;
+          color: $gray-500;
+          z-index: 10;
+        }
+
         input[type="email"] {
           width: 100%;
           padding: 0.5rem;
+          padding-left: 2rem;
           border: 1px solid $gray-300;
           border-radius: 4px;
 
@@ -147,7 +160,8 @@
       }
 
       .error-message {
-        color: red; /* Or you can use a specific shade of red if you prefer */
+        color: red;
+        /* Or you can use a specific shade of red if you prefer */
         text-align: center;
       }
 

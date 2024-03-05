@@ -1,6 +1,6 @@
 #how-does-it-work {
     background-color: $gray-100;
-    padding: 1rem 0; 
+    padding: 1rem 0;
     margin-top: 40px;
 
     @include lg {
@@ -30,15 +30,15 @@
 
     .slider-container {
         display: flex;
-        flex-direction: column; 
-        justify-content: center; 
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
         position: relative;
         @include shadow-m;
 
         @include lg {
             display: flex;
-            justify-content: center; 
+            justify-content: center;
             align-items: center;
             position: relative;
             @include shadow-m;
@@ -52,13 +52,18 @@
                 position: absolute;
                 background-color: white;
                 border-radius: 50%;
-                width: 3rem; 
-                height: 3rem; 
+                width: 3rem;
+                height: 3rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 cursor: pointer;
                 z-index: 10;
+                transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: $gray-400;
+                    }
             }
 
             &.left-nav {
@@ -81,22 +86,23 @@
 
         .phone-images {
             display: flex;
-            flex-direction: row; 
+            flex-direction: row;
             justify-content: center;
             align-items: center;
-            width: 100%; 
+            width: 100%;
             overflow: hidden;
 
             @include lg {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                width: 80%; 
-                max-width: 1200px; 
+                width: 80%;
+                max-width: 1200px;
             }
 
             .how-it-works-img-1 {
                 display: none;
+
                 @include lg {
                     display: block;
                     opacity: 0.8;
@@ -105,6 +111,7 @@
 
             .how-it-works-img-2 {
                 display: none;
+
                 @include lg {
                     display: block;
                     opacity: 0.8;
@@ -132,5 +139,3 @@
         }
     }
 }
-
-

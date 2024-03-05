@@ -55,6 +55,7 @@ const NewsDontMissAnything = () => {
             </div>
           </div>
           <div className="input-wrapper">
+            <i className="fa-regular fa-envelope email-icon"></i>
             <input type="email" placeholder="Your Email" aria-label="Email for newsletter" />
             <button className="btn-theme" type="submit">Subscribe*</button>
           </div>

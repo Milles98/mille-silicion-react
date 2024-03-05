@@ -57,7 +57,7 @@ const Faq = () => {
           <div className="information-bottom-left-side">
             <h2>Any questions?<br />Check out the FAQs</h2>
             <p className="get-in-touch">
-              Still have unanswered questions and need to get<br />in touch?
+              Still have unanswered questions and need to get in touch?
             </p>
             <div className="contact-options">
               <div className="have-questions">

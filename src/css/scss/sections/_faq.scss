@@ -97,9 +97,14 @@
                     border-radius: 8px;
                     overflow: hidden;
                     margin-bottom: 1rem;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: $gray-400;
+                    }
 
                     .heading {
-                        position: relative; // Add this line
+                        position: relative; 
                         display: flex;
                         justify-content: space-between;
                         align-items: center;

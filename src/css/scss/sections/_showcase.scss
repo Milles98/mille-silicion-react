@@ -8,8 +8,8 @@
     .container {
         display: grid;
         grid-template-columns: 1fr auto;
-        grid-template-areas:    "img"
-                                "content";
+        grid-template-areas: "img"
+            "content";
 
         @include md {
             grid-template-columns: 1fr 1fr;
@@ -60,11 +60,25 @@
             }
 
             .more {
+                margin-top: 0;
                 margin-bottom: 20px;
                 @include text-m;
 
+                @include lg {
+                    margin-top: 10rem;
+                    margin-bottom: 60px;
+                }
+
                 i {
+                    text-align: center;
                     margin-right: 8px;
+                    background-color: white;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    padding-top: 9px;
+                    font-size: 0.75rem;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
                 }
             }
         }
