@@ -3,7 +3,7 @@
     padding: 1rem 0;
     margin-top: 40px;
 
-    @include lg {
+    @include xl {
         padding: 2rem 0;
         margin-top: 75px;
     }
@@ -17,7 +17,7 @@
         text-align: center;
         margin-bottom: 2rem;
 
-        @include lg {
+        @include xl {
             margin-top: 30px;
             text-align: center;
             margin-bottom: 2rem;
@@ -36,7 +36,7 @@
         position: relative;
         @include shadow-m;
 
-        @include lg {
+        @include xl {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -47,7 +47,7 @@
         .how-it-works-navigation {
             display: none;
 
-            @include lg {
+            @include xl {
                 display: flex;
                 position: absolute;
                 background-color: white;
@@ -93,7 +93,7 @@
             width: 100%;
             overflow: hidden;
 
-            @include lg {
+            @include xl {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -104,7 +104,7 @@
             .how-it-works-img-1 {
                 display: none;
 
-                @include lg {
+                @include xl {
                     display: block;
                     opacity: 0.8;
                 }
@@ -113,7 +113,7 @@
             .how-it-works-img-2 {
                 display: none;
 
-                @include lg {
+                @include xl {
                     display: block;
                     opacity: 0.8;
                 }
