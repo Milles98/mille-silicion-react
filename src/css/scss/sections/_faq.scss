@@ -103,8 +103,22 @@
                         background-color: $gray-400;
                     }
 
+                    .toggleButton {
+                        i {
+                            background-color: #F3F6FF; // Default background color
+                            border-radius: 50%;
+                            // other styling for the icon...
+
+                            // When the card is open, this will change the background of the icon
+                            &.fa-chevron-up {
+                                background-color: $primary;
+                                color: white;
+                            }
+                        }
+                    }
+
                     .heading {
-                        position: relative; 
+                        position: relative;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
