@@ -49,9 +49,10 @@ const Header = () => {
           <i className="fa-regular fa-user"></i> Sign in / up
         </Link>
 
-        <button id="btn-menu" onClick={toggleMenu}> 
-          <i className="fa-regular fa-bars"></i> 
+        <button id="btn-menu" className={isMenuVisible ? 'toggled' : ''} onClick={toggleMenu}> 
+            <i className="fa-regular fa-bars"></i> 
         </button>
+
       </div>
     </header>
   )

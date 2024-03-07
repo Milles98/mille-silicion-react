@@ -34,6 +34,7 @@ header {
             top:0;
             left: 0;
             height: 100vh;
+            z-index: 10;
 
             @include lg {
                 height: 100%;
@@ -90,7 +91,17 @@ header {
             padding: 18px 22px;
             font-size: 2em;
             background: $transparent;
+            
             border: none;
+            color: black; // Default color is black
+            z-index: 15;
+          
+            &.toggled {
+                color: white; // When toggled, color is white
+                position: fixed;
+                top: 12px;
+                right: 12px;
+            }
 
             @include lg {
                 display: none;
