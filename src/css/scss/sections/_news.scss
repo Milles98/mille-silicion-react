@@ -54,6 +54,11 @@
         align-items: start;
       }
 
+      .error-message-news {
+        color: $danger;
+        grid-column: 1 / -1;
+      }
+
       h5 {
         grid-column: 1 / 2;
         font-size: 1.25rem;
@@ -91,6 +96,7 @@
             align-items: center;
             margin-bottom: 0.5rem;
             color: $gray-700;
+            @include text-s;
 
             // Ensuring the checkbox is the first element inline, followed by the label text
             input[type="checkbox"] {

@@ -163,7 +163,8 @@
             text-align: left;
 
             .error {
-                color: $red;
+                color: $danger;
+                margin-left: 12px;
             }
 
             label {

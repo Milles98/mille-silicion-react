@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Arrows from '../../../images/news/arrows.svg';
 
 const NewsDontMissAnything = () => {
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+
   // State hooks for each newsletter type
   const [dailyNewsletter, setDailyNewsletter] = useState(false);
   const [eventUpdates, setEventUpdates] = useState(false);
@@ -12,6 +15,40 @@ const NewsDontMissAnything = () => {
 
   // onChange handlers for each newsletter type
   const handleCheckboxChange = (setter) => (event) => setter(event.target.checked);
+
+  const validateEmail = (email) => {
+    return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email);
+  };
+
+  const handleSubscribe = async (event) => {
+    event.preventDefault();
+    setError('');
+
+    if (!validateEmail(email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
+
+    try {
+      const response = await fetch('https://kyhnet23-assignment.azurewebsites.net/api/subscribe?email=' + encodeURIComponent(email), {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json(); // Assuming the server sends a JSON response
+        throw new Error(`HTTP error! status: ${response.status}, Message: ${errorData.message}`);
+      }
+
+      setEmail('');
+      alert('Thank you for subscribing!');
+    } catch (error) {
+      console.error('Subscription error:', error);
+      setError('Failed to subscribe. Please try again later.');
+    }
+  };
 
   return (
     <section id="dont-want-to-miss-anything">
@@ -54,11 +91,21 @@ const NewsDontMissAnything = () => {
               </label>
             </div>
           </div>
-          <div className="input-wrapper">
-            <i className="fa-regular fa-envelope email-icon"></i>
-            <input type="email" placeholder="Your Email" aria-label="Email for newsletter" />
-            <button className="btn-theme" type="submit">Subscribe*</button>
-          </div>
+          <form className='input-wrapper' onSubmit={handleSubscribe} noValidate>
+            <div className="input-wrapper">
+              <i className="fa-regular fa-envelope email-icon"></i>
+              <input
+                type="email"
+                placeholder="Your Email"
+                aria-label="Email for newsletter"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <button className="btn-theme" type="submit">Subscribe*</button>
+            </div>
+          </form>
+          {error && <div className="error-message-news">{error}</div>}
         </div>
         <p className="disclaimer">* Yes, I agree to the <a href="#">terms</a> and <a href="#">privacy policy</a>.</p>
       </div>

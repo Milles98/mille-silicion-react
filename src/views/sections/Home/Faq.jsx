@@ -10,7 +10,7 @@ const FaqCard = ({ question, answer }) => {
       <div className="heading">
         <button className="toggleButton" onClick={toggleIsOpen}>
           {question}
-          <i className={`fa-regular fa-chevron-down ${isOpen ? 'open' : ''}`}></i>
+          <i className={`fa-regular ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`}></i>
         </button>
       </div>
       <div className={`dropdown-content ${isOpen ? 'open' : ''}`}>

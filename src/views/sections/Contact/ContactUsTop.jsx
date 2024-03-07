@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // getbootstrap alerts / modal fixa för VG (istället för den fula popup typ "success")
 // https://getbootstrap.com/docs/4.0/components/alerts/
 // https://getbootstrap.com/docs/4.0/components/modal/
+
 const ContactUsTop = () => {
 
   const [formData, setFormData] = useState({
@@ -35,6 +36,10 @@ const ContactUsTop = () => {
     if (!formData.email || !/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address.';
     }
+    if (!formData.Specialist.trim()) newErrors.Specialist = 'Please select a specialist.';
+    if (!formData.date.trim()) newErrors.date = 'Please select a date.';
+    if (!formData.time.trim()) newErrors.time = 'Please select a time.';
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -142,7 +147,7 @@ const ContactUsTop = () => {
                   </option>
                 ))}
               </select>
-              {errors.Specialist && <div className="error-message">{errors.Specialist}</div>}
+              {errors.Specialist && <div className="error">{errors.Specialist}</div>}
             </div>
             <div className="form-group-row">
               <div className="form-group">

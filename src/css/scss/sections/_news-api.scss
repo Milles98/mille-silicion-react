@@ -16,11 +16,12 @@
         flex-direction: column;
         border-radius: 1rem;
         overflow: hidden;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         margin-bottom: 1rem;
 
         &:hover {
             transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
         }
 
         .news-image {
