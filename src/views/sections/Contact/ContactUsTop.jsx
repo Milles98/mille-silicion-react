@@ -69,6 +69,17 @@ const ContactUsTop = () => {
       const data = await response.text();
       console.log('Success:', data);
       alert('Appointment made successfully.');
+
+      setFormData({
+        fullName: '',
+        email: '',
+        Specialist: '',
+        date: '',
+        time: ''
+      });
+
+
+
     } catch (error) {
       console.error('Error:', error);
       alert(`An error occurred while making the appointment. ${error.toString()}`);
