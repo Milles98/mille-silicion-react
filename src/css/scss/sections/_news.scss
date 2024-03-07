@@ -2,7 +2,7 @@
   background-color: $gray-100;
   margin-top: 2rem;
 
-  @include lg {
+  @include xl {
     margin-top: 8rem;
   }
 
@@ -11,7 +11,15 @@
     max-width: 100%;
     margin: 0 auto; // Center the container
 
-    @include lg {
+    @include md {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 80%;
+    }
+
+    @include xl {
       max-width: 45%; // Limit the maximum width of the container to 60% of the parent element
     }
 
