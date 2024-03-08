@@ -16,6 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <div className="wrapper">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/#features" element={<Home />} />
           <Route path="*" element={<Error />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/news" element={<News />} />

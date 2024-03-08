@@ -25,9 +25,9 @@ const ContactUsMiddle = () => {
             </p>
             <p><i className="fas fa-phone-volume"></i> (405) 555-0120</p>
             <p>
-              <i className="fas fa-clock"></i>Mon - Fri: 9:00 am - 22:00 pm
+              <i className="fas fa-clock"></i> <strong>Mon - Fri:</strong> 9:00 am - 22:00 pm
             </p>
-            <p>Sat - Sun: 9:00 am - 20:00 pm</p>
+            <p> <strong>Sat - Sun:</strong> 9:00 am - 20:00 pm</p>
           </div>
 
           <div className="medical-center">
@@ -37,9 +37,9 @@ const ContactUsMiddle = () => {
             </p>
             <p><i className="fas fa-phone-volume"></i> (406) 544-0123</p>
             <p>
-              <i className="fas fa-clock"></i>Mon - Fri: 9:00 am - 22:00 pm
+              <i className="fas fa-clock"></i> <strong>Mon - Fri:</strong> 9:00 am - 22:00 pm
             </p>
-            <p>Sat - Sun: 9:00 am - 20:00 pm</p>
+            <p> <strong>Sat - Sun:</strong> 9:00 am - 20:00 pm</p>
           </div>
 
           <div className="social-icons">

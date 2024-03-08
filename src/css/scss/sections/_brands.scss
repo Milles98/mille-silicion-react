@@ -9,7 +9,7 @@
     .container {
         display: none;
         gap: 10px;
-        
+
         @include md {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
