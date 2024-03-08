@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './css/main.min.css';
 
-import Header from './views/sections/Header';
 import Footer from './views/sections/Footer';
 import Home from './views/Home';
 import Error from './views/Error';
@@ -13,15 +12,14 @@ import News from './views/News';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <BrowserRouter>
+    <BrowserRouter>
       <div className="wrapper">
-        <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="*" element={<Error />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/news" element={<News />} />
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Error />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/news" element={<News />} />
+        </Routes>
         <Footer />
       </div>
     </BrowserRouter>

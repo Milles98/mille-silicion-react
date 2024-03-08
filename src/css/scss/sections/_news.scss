@@ -9,18 +9,20 @@
   .container {
     padding: 20px;
     max-width: 100%;
-    margin: 0 auto; // Center the container
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 
     @include md {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: start;
+      align-items: start;
       max-width: 80%;
     }
 
     @include xl {
-      max-width: 45%; // Limit the maximum width of the container to 60% of the parent element
+      max-width: 45%;
     }
 
     .header {
@@ -57,8 +59,8 @@
 
       @include lg {
         display: grid;
-        grid-template-columns: 1fr 3fr; // Maintain the ratio but the overall size will be reduced
-        column-gap: 30px; // Adjust the gap if necessary
+        grid-template-columns: 1fr 3fr;
+        column-gap: 30px;
         align-items: start;
       }
 
@@ -106,13 +108,11 @@
             color: $gray-700;
             @include text-s;
 
-            // Ensuring the checkbox is the first element inline, followed by the label text
             input[type="checkbox"] {
-              order: -1; // Moves the checkbox before the label text
-              margin-right: 0.5rem; // Space between the checkbox and the label text
+              order: -1; 
+              margin-right: 0.5rem;
             }
 
-            // Label text comes after the checkbox because of `order: -1` on the checkbox
             span {
               order: 0;
             }
@@ -141,7 +141,7 @@
           color: $gray-500;
           z-index: 10;
 
-          
+
         }
 
         input[type="email"] {
@@ -152,12 +152,11 @@
           border-radius: 4px;
 
           @include lg {
-            flex: 1; // The input will grow to fit the available space
+            flex: 1; 
           }
         }
 
         button.btn-theme {
-          // The button will take up the space necessary for its content plus padding
           width: 100%;
           padding: 0.5rem 1rem;
           background-color: $primary;
@@ -178,7 +177,6 @@
 
       .error-message {
         color: red;
-        /* Or you can use a specific shade of red if you prefer */
         text-align: center;
       }
 

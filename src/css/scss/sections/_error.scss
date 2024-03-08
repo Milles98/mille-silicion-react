@@ -1,10 +1,12 @@
 $footer-height: 60px;
 
+
 .wrapper-error {
   display: flex;
   flex-direction: column;
   min-height: 85vh;
   background-image: url('../../images/ooops-side/backgroung-bg-error.svg');
+  
 
   main {
     flex: 1;

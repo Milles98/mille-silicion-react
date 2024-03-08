@@ -1,5 +1,9 @@
-header {
+.header-differential {
     padding: 1rem 0;
+
+    &.show-shadow {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
     .container {
         display: grid;
@@ -7,23 +11,23 @@ header {
 
         gap: 30px;
         grid-template-columns: 1fr auto;
-        grid-template-areas:    "logo btn-menu"
-                                "menu menu";
+        grid-template-areas: "logo btn-menu"
+            "menu menu";
 
         @include md {
             grid-template-columns: 1fr auto auto;
-            grid-template-areas:    "logo theme-mode btn-menu";
+            grid-template-areas: "logo theme-mode btn-menu";
         }
 
         @include lg {
             grid-template-columns: auto 1fr auto auto;
-            grid-template-areas:    "logo menu theme-mode btn-account";
+            grid-template-areas: "logo menu theme-mode btn-account";
         }
 
         #logo {
             grid-area: logo;
         }
-    
+
         #menu {
             grid-area: menu;
             display: none;
@@ -31,7 +35,7 @@ header {
             background-color: $gray-900;
             width: 100%;
             position: fixed;
-            top:0;
+            top: 0;
             left: 0;
             height: 100vh;
             z-index: 10;
@@ -65,7 +69,7 @@ header {
                 }
             }
         }
-    
+
         #theme-mode {
             grid-area: theme-mode;
             display: none;
@@ -74,7 +78,7 @@ header {
                 display: block;
             }
         }
-    
+
         #btn-account {
             grid-area: btn-account;
             display: none;
@@ -83,7 +87,7 @@ header {
                 display: block;
             }
         }
-    
+
         #btn-menu {
             grid-area: btn-menu;
             display: block;
@@ -91,11 +95,11 @@ header {
             padding: 18px 22px;
             font-size: 2em;
             background: $transparent;
-            
+
             border: none;
             color: black; // Default color is black
             z-index: 15;
-          
+
             &.toggled {
                 color: white; // When toggled, color is white
                 position: fixed;

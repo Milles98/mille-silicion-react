@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom'
 import Logo from '../../images/logo/silicon-logo-light_theme.svg'
 
-const Header = () => {
-
-  // State to manage whether the menu is shown or not
+const Header = ({ showShadow }) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
-  // Function to toggle menu visibility
   const toggleMenu = () => {
     setIsMenuVisible(!isMenuVisible);
   };
@@ -19,7 +16,7 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <header className={`header-differential ${showShadow ? 'show-shadow' : ''}`}>
       <div className="container">
         <Link id="logo" to="/">
           <img src={Logo} alt="silicon logotype" />
@@ -49,8 +46,8 @@ const Header = () => {
           <i className="fa-regular fa-user"></i> Sign in / up
         </Link>
 
-        <button id="btn-menu" className={isMenuVisible ? 'toggled' : ''} onClick={toggleMenu}> 
-            <i className="fa-regular fa-bars"></i> 
+        <button id="btn-menu" className={isMenuVisible ? 'toggled' : ''} onClick={toggleMenu}>
+          <i className="fa-regular fa-bars"></i>
         </button>
 
       </div>

@@ -1,9 +1,9 @@
 .wrapper-contact {
     background-color: $gray-100;
-    height: 90vh;
+    height: 95vh;
 
     @include lg {
-        height: 70vh;
+        height: 80vh;
     }
 }
 
@@ -18,6 +18,14 @@
         text-align: start;
         justify-content: start;
         margin-bottom: 0;
+    }
+
+    i.fa-house {
+        color: $gray-600;
+    }
+
+    .house-text {
+        color: $gray-600;
     }
 
     @include text-s;

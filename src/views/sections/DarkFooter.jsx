@@ -29,7 +29,7 @@ const DarkFooter = () => {
       });
 
       if (!response.ok) {
-        const errorData = await response.json(); // Assuming the server sends a JSON response
+        const errorData = await response.json(); 
         throw new Error(`HTTP error! status: ${response.status}, Message: ${errorData.message}`);
       }
 

@@ -104,7 +104,7 @@ const ContactUsTop = () => {
     <div className="container">
       <div className="location">
         <p>
-          <i className="fa-regular fa-house"></i> Home
+          <Link className='house-text' to='/'><i className="fa-regular fa-house"></i> Home</Link>
           <i className="fa-solid fa-angles-right"></i>
         </p>
         <Link to="/contact">Contact</Link>

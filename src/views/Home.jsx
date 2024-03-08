@@ -8,10 +8,12 @@ import ClientsLoveApp from './sections/Home/ClientsLoveApp'
 import Faq from './sections/Home/Faq'
 import NewsLetter from './sections/Home/NewsLetter'
 import FooterHome from './sections/Home/FooterHome'
+import Header from './sections/Header'
 
 const Home = () => {
   return (
     <main>
+      <Header />
       <Showcase />
       <Brands />
       <Features />
