@@ -1,20 +1,19 @@
 $footer-height: 60px;
 
 
-.wrapper-error {
+#wrapper-error {
   display: flex;
   flex-direction: column;
   min-height: 85vh;
   background-image: url('../../images/ooops-side/backgroung-bg-error.svg');
-  
 
-  main {
+  .main-error {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
 
   .ooops-center {

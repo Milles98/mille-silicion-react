@@ -141,14 +141,15 @@
         margin-top: 100px;
         box-shadow: none;
         padding: 20px;
-        text-align: center;
         border-radius: 1rem;
+        text-align: center;
 
         @include lg {
-            @include shadow-l;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             background-color: white;
             height: 110%;
             margin-top: 0;
+            text-align: start;
         }
 
         button.btn-theme {
@@ -166,6 +167,7 @@
 
         h2 {
             margin-bottom: 20px;
+            margin-left: 8px;
         }
 
         .form-group,
@@ -266,7 +268,7 @@
 
         .social-icons {
             display: flex;
-            justify-content: center; // Center social icons on mobile
+            justify-content: center; 
             padding-top: 20px;
             margin-bottom: 20px;
             gap: 15px;

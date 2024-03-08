@@ -4,7 +4,8 @@ import Error_Image from '../../../images/ooops-side/404.svg'
 
 const ErrorBody = () => {
     return (
-        <section id="ooops">
+        <section id="wrapper-error">
+            <div className='main-error'>
             <div className="ooops-center">
                 <img src={Error_Image} alt="404 Not Found Image" />
                 <h2>Ooops!</h2>
@@ -14,6 +15,7 @@ const ErrorBody = () => {
                         <i className="fa-regular fa-house"></i> Go to homepage
                     </button>
                 </Link>
+            </div>
             </div>
         </section>
     )
