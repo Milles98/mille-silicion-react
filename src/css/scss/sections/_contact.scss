@@ -1,8 +1,12 @@
 .wrapper-contact {
     background-color: $gray-100;
-    height: 95vh;
+    height: 102vh;
 
-    @include lg {
+    @include md {
+        height: 60vh;
+    }
+
+    @include xl {
         height: 80vh;
     }
 }

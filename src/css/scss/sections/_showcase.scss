@@ -1,8 +1,16 @@
 #showcase {
     background: $gradient-background;
+    margin-top: -180px;
+    padding-top: 180px;
 
-    @include lg {
-        padding-top: 40px;
+    @include md {
+        margin-top: -100px;
+        padding-top: 140px;
+    }
+
+    @include xl {
+        margin-top: -100px;
+        padding-top: 180px;
     }
 
     .container {

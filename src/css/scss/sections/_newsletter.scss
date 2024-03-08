@@ -1,5 +1,6 @@
 #newsletter {
     padding: 2rem 0;
+
     .container {
         border-radius: 1rem;
         background-color: $gray-100;
@@ -21,6 +22,22 @@
                 text-align: left;
             }
 
+            .left-newsletter {
+                @include md {
+                    display: flex;
+                    gap: 2rem;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                @include xl {
+                    display: flex;
+                    gap: 2rem;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
             .form-newsletter {
 
                 .error-message {
@@ -29,7 +46,7 @@
 
                 .newsletter-form {
                     display: flex;
-                    
+
                     .input-wrapper {
                         position: relative;
                         display: flex;
@@ -40,26 +57,34 @@
                         border-radius: 5px 0 0 5px;
                         padding: 3px;
 
-                        .email-icon {
-                            position: absolute; 
-                            left: 10px; 
-                            color: $gray-500; 
-                            z-index: 10; 
-                          }
+                        @include md {
+                            width: 300px;
+                        }
 
-                          input[type="email"] {
+                        @include xl {
+                            width: 400px;
+                        }
+
+                        .email-icon {
+                            position: absolute;
+                            left: 10px;
+                            color: $gray-500;
+                            z-index: 10;
+                        }
+
+                        input[type="email"] {
                             flex: 1;
                             padding: 0.5rem;
-                            padding-left: 2rem; 
+                            padding-left: 2rem;
                             border: none;
                             border-radius: 5px 0 0 5px;
-                      
-                            &:focus {
-                              outline: none;
-                            }
-                          }
 
-                          .error-message {
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        .error-message {
                             color: $danger; // Change the color as needed
                             position: absolute; // Absolute position within the wrapper
                             bottom: -20px; // Adjust the value to move the message below the input
@@ -69,11 +94,12 @@
                             @include text-s;
                             // You can add padding if necessary
                         }
-                        }
+                    }
+
                     button {
                         padding: 0.5rem 1rem;
                         border-radius: 0 5px 5px 0;
-                  }
+                    }
                 }
             }
         }

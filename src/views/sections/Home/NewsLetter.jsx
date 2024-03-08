@@ -43,8 +43,10 @@ const NewsLetter = () => {
     <section id="newsletter">
       <div className="container">
         <div className="content">
-          <img src={Notification} alt="Notification" />
-          <h4>Subscribe to our newsletter to stay<br></br> informed about latest updates</h4>
+          <div className="left-newsletter">
+            <img src={Notification} alt="Notification" />
+            <h4>Subscribe to our newsletter to stay<br></br> informed about latest updates</h4>
+          </div>
           <div className="form-newsletter">
             <form className="newsletter-form" id="newsletter-form" noValidate onSubmit={handleSubscribe}>
               <div className="input-wrapper">
