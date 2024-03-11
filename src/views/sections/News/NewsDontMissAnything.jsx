@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
 import Arrows from '../../../images/news/arrows.svg';
+import CustomAlert from '../../components/CustomAlert';
 
 const NewsDontMissAnything = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
+
+  const [showCustomAlert, setShowCustomAlert] = useState(false);
+  const [customAlertConfig, setCustomAlertConfig] = useState({ message: '', type: '' });
+
+  const handleCustomAlert = (message, type) => {
+    setCustomAlertConfig({ message, type });
+    setShowCustomAlert(true);
+  };
 
   // State hooks for each newsletter type
   const [dailyNewsletter, setDailyNewsletter] = useState(false);
@@ -38,12 +47,12 @@ const NewsDontMissAnything = () => {
       });
 
       if (!response.ok) {
-        const errorData = await response.json(); // Assuming the server sends a JSON response
+        const errorData = await response.json(); 
         throw new Error(`HTTP error! status: ${response.status}, Message: ${errorData.message}`);
       }
 
       setEmail('');
-      alert('Thank you for subscribing!');
+      handleCustomAlert('Thank you for subscribing!', 'success');
     } catch (error) {
       console.error('Subscription error:', error);
       setError('Failed to subscribe. Please try again later.');
@@ -53,6 +62,12 @@ const NewsDontMissAnything = () => {
   return (
     <section id="dont-want-to-miss-anything">
       <div className="container">
+      {showCustomAlert && (
+        <CustomAlert
+          config={customAlertConfig}
+          onClose={() => setShowCustomAlert(false)}
+        />
+      )}
         <div className="header">
           <h1>Don’t Want to Miss Anything?</h1>
           <img src={Arrows} alt="Arrows" />

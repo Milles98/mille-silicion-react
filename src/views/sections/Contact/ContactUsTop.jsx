@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import CustomAlert from '../../components/CustomAlert';
 
 // getbootstrap alerts / modal fixa för VG (istället för den fula popup typ "success")
 // https://getbootstrap.com/docs/4.0/components/alerts/
 // https://getbootstrap.com/docs/4.0/components/modal/
 
 const ContactUsTop = () => {
+  const [showCustomAlert, setShowCustomAlert] = useState(false);
+  const [customAlertConfig, setCustomAlertConfig] = useState({ message: '', type: '' });
+
+  const handleCustomAlert = (message, type) => {
+    setCustomAlertConfig({ message, type });
+    setShowCustomAlert(true);
+  };
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -68,7 +76,7 @@ const ContactUsTop = () => {
 
       const data = await response.text();
       console.log('Success:', data);
-      alert('Appointment made successfully.');
+      handleCustomAlert('Appointment made successfully.', 'success');
 
       setFormData({
         fullName: '',
@@ -82,7 +90,7 @@ const ContactUsTop = () => {
 
     } catch (error) {
       console.error('Error:', error);
-      alert(`An error occurred while making the appointment. ${error.toString()}`);
+      handleCustomAlert(`An error occurred while making the appointment. ${error.toString()}`, 'error');
     }
   };
 
@@ -102,6 +110,12 @@ const ContactUsTop = () => {
 
   return (
     <div className="container">
+      {showCustomAlert && (
+        <CustomAlert
+          config={customAlertConfig}
+          onClose={() => setShowCustomAlert(false)}
+        />
+      )}
       <div className="location">
         <p>
           <Link className='house-text' to='/'><i className="fa-regular fa-house"></i> Home</Link>

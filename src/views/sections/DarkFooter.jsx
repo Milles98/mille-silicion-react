@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Dark_Logo from '../../images/logo/silicon-logo-dark_theme.svg'
+import CustomAlert from '../components/CustomAlert';
 
 const DarkFooter = () => {
+  const [showCustomAlert, setShowCustomAlert] = useState(false);
+  const [customAlertConfig, setCustomAlertConfig] = useState({ message: '', type: '' });
+
+  const handleCustomAlert = (message, type) => {
+    setCustomAlertConfig({ message, type });
+    setShowCustomAlert(true);
+  };
 
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
@@ -34,16 +42,22 @@ const DarkFooter = () => {
       }
 
       setEmail('');
-      alert('Thank you for subscribing!');
+      handleCustomAlert('Thank you for subscribing!', 'success');
     } catch (error) {
       console.error('Subscription error:', error);
-      setError('Failed to subscribe. Please try again later.');
+      handleCustomAlert('Failed to subscribe. Please try again later.');
     }
   };
 
   return (
     <footer className="footer">
       <div className="container">
+      {showCustomAlert && (
+        <CustomAlert
+          config={customAlertConfig}
+          onClose={() => setShowCustomAlert(false)}
+        />
+      )}
         <div className="footer-branding">
           <img
             src={Dark_Logo}

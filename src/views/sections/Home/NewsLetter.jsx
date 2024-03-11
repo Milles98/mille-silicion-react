@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
 import Notification from '../../../images/newsletter/notification.svg';
+import CustomAlert from '../../components/CustomAlert';
 
 const NewsLetter = () => {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
+
+  const [showCustomAlert, setShowCustomAlert] = useState(false);
+  const [customAlertConfig, setCustomAlertConfig] = useState({ message: '', type: '' });
+
+  const handleCustomAlert = (message, type) => {
+    setCustomAlertConfig({ message, type });
+    setShowCustomAlert(true);
+  };
 
   const validateEmail = (email) => {
     return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email);
@@ -32,7 +41,7 @@ const NewsLetter = () => {
       }
 
       setEmail('');
-      alert('Thank you for subscribing!');
+      handleCustomAlert('Thank you for subscribing!', 'success');
     } catch (error) {
       console.error('Subscription error:', error);
       setError('Failed to subscribe. Please try again later.');
@@ -42,6 +51,12 @@ const NewsLetter = () => {
   return (
     <section id="newsletter">
       <div className="container">
+        {showCustomAlert && (
+          <CustomAlert
+            config={customAlertConfig}
+            onClose={() => setShowCustomAlert(false)}
+          />
+        )}
         <div className="content">
           <div className="left-newsletter">
             <img src={Notification} alt="Notification" />
