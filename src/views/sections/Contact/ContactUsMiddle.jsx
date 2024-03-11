@@ -27,7 +27,7 @@ const ContactUsMiddle = () => {
             <p>
               <i className="fas fa-clock"></i> <strong>Mon - Fri:</strong> 9:00 am - 22:00 pm
             </p>
-            <p> <strong>Sat - Sun:</strong> 9:00 am - 20:00 pm</p>
+            <p className='medical-center-bold'> <strong>Sat - Sun:</strong> 9:00 am - 20:00 pm</p>
           </div>
 
           <div className="medical-center">
@@ -39,7 +39,7 @@ const ContactUsMiddle = () => {
             <p>
               <i className="fas fa-clock"></i> <strong>Mon - Fri:</strong> 9:00 am - 22:00 pm
             </p>
-            <p> <strong>Sat - Sun:</strong> 9:00 am - 20:00 pm</p>
+            <p className='medical-center-bold'> <strong>Sat - Sun:</strong> 9:00 am - 20:00 pm</p>
           </div>
 
           <div className="social-icons">

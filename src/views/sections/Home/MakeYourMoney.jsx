@@ -15,7 +15,7 @@ const MakeYourMoney = () => {
           <p><i className="fa-regular fa-circle-check"></i> Banking transactions are free for you</p>
           <p><i className="fa-regular fa-circle-check"></i> No monthly cash commission</p>
           <p><i className="fa-regular fa-circle-check"></i> Manage payments and transactions online</p>
-          <button className="btn-theme">Learn more</button>
+          <button className="btn-theme">Learn more -&gt;</button>
         </div>
 
         <div className="card top-right">
@@ -40,7 +40,7 @@ const MakeYourMoney = () => {
               <p>A elementum and imperdiet enim,<br></br> pretium etiam facilisi aenean quam mauris.</p>
             </div>
           </div>
-          <button className="btn-theme">Learn more</button>
+          <button className="btn-theme">Learn more -&gt;</button>
         </div>
       </div>
     </section>
