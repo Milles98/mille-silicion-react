@@ -46,11 +46,13 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    align-items: center;
                     gap: 2rem;
                     margin-left: -15px;
 
                     @include lg {
                         flex-direction: row;
+                        align-items: start;
                     }
 
                     >div {
@@ -136,6 +138,11 @@
                             align-items: center;
                             color: $gray-900;
                             font-weight: bold;
+                            padding-right: 3rem;
+
+                            @include lg {
+                                padding-right: 0;
+                            }
                         }
 
                         i {
