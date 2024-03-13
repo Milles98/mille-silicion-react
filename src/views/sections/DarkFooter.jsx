@@ -37,7 +37,7 @@ const DarkFooter = () => {
       });
 
       if (!response.ok) {
-        const errorData = await response.json(); 
+        const errorData = await response.json();
         throw new Error(`HTTP error! status: ${response.status}, Message: ${errorData.message}`);
       }
 

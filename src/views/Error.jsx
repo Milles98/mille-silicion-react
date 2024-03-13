@@ -6,9 +6,9 @@ import Header from './sections/Header'
 const Error = () => {
   return (
     <>
-        <Header />
-        <ErrorBody />
-        <ErrorFooter />
+      <Header />
+      <ErrorBody />
+      <ErrorFooter />
     </>
   )
 }

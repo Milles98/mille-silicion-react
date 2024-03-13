@@ -6,16 +6,16 @@ const ErrorBody = () => {
     return (
         <section id="wrapper-error">
             <div className='main-error'>
-            <div className="ooops-center">
-                <img src={Error_Image} alt="404 Not Found Image" />
-                <h2>Ooops!</h2>
-                <p>The page you are looking for is not available.</p>
-                <Link to="/">
-                    <button className="btn-theme">
-                        <i className="fa-regular fa-house"></i> Go to homepage
-                    </button>
-                </Link>
-            </div>
+                <div className="ooops-center">
+                    <img src={Error_Image} alt="404 Not Found Image" />
+                    <h2>Ooops!</h2>
+                    <p>The page you are looking for is not available.</p>
+                    <Link to="/">
+                        <button className="btn-theme">
+                            <i className="fa-regular fa-house"></i> Go to homepage
+                        </button>
+                    </Link>
+                </div>
             </div>
         </section>
     )

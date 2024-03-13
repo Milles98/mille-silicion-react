@@ -16,7 +16,7 @@ const NewsDontMissAnything = () => {
 
   const [dailyNewsletter, setDailyNewsletter] = useState(false);
   const [eventUpdates, setEventUpdates] = useState(false);
-  const [advertisingUpdates, setAdvertisingUpdates] = useState(true); 
+  const [advertisingUpdates, setAdvertisingUpdates] = useState(true);
   const [startupsWeekly, setStartupsWeekly] = useState(false);
   const [weekInReview, setWeekInReview] = useState(false);
   const [podcasts, setPodcasts] = useState(false);
@@ -45,7 +45,7 @@ const NewsDontMissAnything = () => {
       });
 
       if (!response.ok) {
-        const errorData = await response.json(); 
+        const errorData = await response.json();
         throw new Error(`HTTP error! status: ${response.status}, Message: ${errorData.message}`);
       }
 

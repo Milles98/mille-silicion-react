@@ -18,11 +18,11 @@ const ClientsLoveApp = () => {
         </div>
         <div className="testimonials">
           <div className="testimonial testimonial-left">
-            <img className="quote-1" src={Quote} alt="Quotation marks"/>
-            <img className="rating" src={Rating_Left} alt="Client rating"/>
+            <img className="quote-1" src={Quote} alt="Quotation marks" />
+            <img className="rating" src={Rating_Left} alt="Client rating" />
             <p>Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis. Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel. Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.</p>
             <div className="client-info">
-              <img src={Image_1_Left} alt="Client avatar"/>
+              <img src={Image_1_Left} alt="Client avatar" />
               <div className="text-container">
                 <h6>Fannie Summers</h6>
                 <p>Designer</p>
@@ -30,11 +30,11 @@ const ClientsLoveApp = () => {
             </div>
           </div>
           <div className="testimonial testimonial-right">
-            <img className="quote-2" src={Quote} alt="Quotation marks"/>
-            <img className="rating" src={Rating_Right} alt="Client rating"/>
+            <img className="quote-2" src={Quote} alt="Quotation marks" />
+            <img className="rating" src={Rating_Right} alt="Client rating" />
             <p>Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit amet. Dictum pretium dolor tincidunt egestas eget nunc.</p>
             <div className="client-info">
-              <img src={Image_2_Right} alt="Client avatar"/>
+              <img src={Image_2_Right} alt="Client avatar" />
               <div className="text-container">
                 <h6>Albert Flores</h6>
                 <p>Developer</p>

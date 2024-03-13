@@ -16,6 +16,7 @@
     justify-content: center;
     text-align: center;
     margin-bottom: 2rem;
+    @include text-s;
 
     @include lg {
         margin-top: 30px;
@@ -30,9 +31,12 @@
 
     .house-text {
         color: $gray-600;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
-    @include text-s;
 
     p {
         color: $gray-600;

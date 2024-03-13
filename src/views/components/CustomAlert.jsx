@@ -10,7 +10,7 @@ const CustomAlert = ({ config: { message, type }, onClose }) => (
         width: '100%',
         height: '100%',
         backdropFilter: 'blur(5px)',
-        backgroundColor: 'rgba(0,0,0,0.4)', 
+        backgroundColor: 'rgba(0,0,0,0.4)',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
