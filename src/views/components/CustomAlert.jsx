@@ -10,11 +10,11 @@ const CustomAlert = ({ config: { message, type }, onClose }) => (
         width: '100%',
         height: '100%',
         backdropFilter: 'blur(5px)',
-        backgroundColor: 'rgba(0,0,0,0.4)', // Semi-transparent background
+        backgroundColor: 'rgba(0,0,0,0.4)', 
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        zIndex: 999, // Ensure it's below the alert but above everything else
+        zIndex: 999,
       }}
     ></div>
     <div
