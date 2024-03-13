@@ -1,5 +1,5 @@
 #make-your-money {
-  padding: 1rem; 
+  padding: 1rem;
   margin-top: 40px;
 
   @include lg {
@@ -9,9 +9,9 @@
 
   .container {
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     gap: 2rem;
-    max-width: 100%; 
+    max-width: 100%;
     margin: 0 auto;
 
     @include lg {
@@ -24,20 +24,49 @@
   }
 
   .card {
-    padding: 1rem; 
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: none;
 
+    &:nth-child(2) {
+      display: none;
+
+      @include lg {
+        display: block;
+      }
+    }
+
+    &:nth-child(4) {
+      order: 2;
+
+      @include lg {
+        order: 0
+      }
+    }
+
     @include lg {
       padding: 1.5rem;
     }
 
     &.top-left {
+      text-align: center;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      @include lg {
+        text-align: start;
+      }
+
       button.btn-theme {
         margin-top: 1.5rem;
+        align-self: center;
+
+        @include lg {
+          align-self: flex-start;
+        }
       }
 
       h2 {
@@ -48,7 +77,7 @@
     &.bottom-right {
 
       .info-container {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
 
         @include lg {
@@ -95,7 +124,8 @@
       }
     }
 
-    &.top-right, &.bottom-left {
+    &.top-right,
+    &.bottom-left {
       position: relative;
 
       .money-forecast {
@@ -130,7 +160,7 @@
       width: 70%;
       height: 70%;
 
-      
+
     }
 
     &:nth-child(odd) {
