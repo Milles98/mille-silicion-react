@@ -102,19 +102,33 @@
         img.rating {
           margin-top: 2rem;
           margin-bottom: 2rem;
+          align-self: center;
+
+          @include lg {
+            align-self: flex-start;
+          }
         }
 
         p {
-          text-align: left;
+          text-align: center;
           font-size: 1rem;
           color: $gray-700;
           margin-bottom: 1rem;
+
+          @include lg {
+            text-align: left;
+          }
         }
 
         .client-info {
           display: flex;
           align-items: center;
           width: 100%;
+          justify-content: center;
+
+          @include lg {
+            justify-content: start;
+          }
 
           img {
             width: 50px;
@@ -131,19 +145,19 @@
             @include lg {
               justify-content: center;
             }
-          }
 
-          h6 {
-            font-size: 1rem;
-            font-weight: bold;
-            margin: 0.5rem 0;
-          }
-
-          p {
-            font-size: 0.875rem;
-            color: #6c757d;
-            margin: 0;
-            margin-top: -0.5rem;
+            h6 {
+              font-size: 1rem;
+              font-weight: bold;
+              margin: 0.5rem 0;
+            }
+  
+            p {
+              font-size: 0.875rem;
+              color: #6c757d;
+              margin: 0;
+              margin-top: -0.5rem;
+            }
           }
         }
       }

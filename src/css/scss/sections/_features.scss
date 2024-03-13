@@ -71,7 +71,7 @@
     gap: 0.5rem; 
     align-self: stretch;
 
-    @include lg {
+    @include md {
       grid-column: 2 / 3;
       grid-row: 2;
       display: grid;

@@ -8,18 +8,12 @@
 
   .container {
     padding: 20px;
-    max-width: 100%;
+    max-width: 80%;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
 
-    @include md {
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: start;
-      max-width: 80%;
-    }
+  
 
     @include xl {
       max-width: 45%;
@@ -179,6 +173,7 @@
         color: red;
         text-align: center;
       }
+
     }
 
     .disclaimer {
