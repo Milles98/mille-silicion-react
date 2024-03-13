@@ -34,16 +34,16 @@ const NewsCard = ({ title, date, author, imageUrl, category, profileImageUrl }) 
     return (
         
       <div className="news-card">
-        <i className="fa-regular fa-bookmark bookmark-icon"></i> {/* Bookmark icon */}
+        <i className="fa-regular fa-bookmark bookmark-icon"></i>
         <img src={imageUrl} alt={title} className="news-image" />
         <div className="news-content">
-        <div className="news-header">
-          <div className="news-category">{category}</div>
-          <div className="news-date">{date}</div>
-        </div>
+          <div className="news-header">
+            <div className="news-category">{category}</div>
+            <div className="news-date">{date}</div>
+          </div>
           <h5 className="news-title">{title}</h5>
           <div className="news-footer">
-            <img src={profileImageUrl} alt={author} className="profile-image" /> {/* Profile image */}
+            <img src={profileImageUrl} alt={author} className="profile-image" />
             <span className="news-author">{author}</span>
           </div>
         </div>

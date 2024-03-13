@@ -52,12 +52,12 @@ const DarkFooter = () => {
   return (
     <footer className="footer">
       <div className="container">
-      {showCustomAlert && (
-        <CustomAlert
-          config={customAlertConfig}
-          onClose={() => setShowCustomAlert(false)}
-        />
-      )}
+        {showCustomAlert && (
+          <CustomAlert
+            config={customAlertConfig}
+            onClose={() => setShowCustomAlert(false)}
+          />
+        )}
         <div className="footer-branding">
           <img
             src={Dark_Logo}

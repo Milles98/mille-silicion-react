@@ -66,9 +66,9 @@
     grid-column: 1;
     grid-row: 3;
     display: grid;
-    grid-template-columns: 1fr; // Single column for features
-    grid-template-rows: auto; // Auto-adjust rows
-    gap: 0.5rem; // Reduced gap for compactness
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto; 
+    gap: 0.5rem; 
     align-self: stretch;
 
     @include lg {

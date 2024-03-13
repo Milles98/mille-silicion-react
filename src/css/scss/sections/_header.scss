@@ -97,11 +97,11 @@
             background: $transparent;
 
             border: none;
-            color: black; // Default color is black
+            color: black; 
             z-index: 15;
 
             &.toggled {
-                color: white; // When toggled, color is white
+                color: white; 
                 position: fixed;
                 top: 12px;
                 right: 12px;

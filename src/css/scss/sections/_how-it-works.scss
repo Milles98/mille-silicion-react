@@ -68,7 +68,7 @@
 
             &.left-nav {
                 @include lg {
-                    left: 0; /* half the width of the button to move it to the half outside of the container */
+                    left: 0; 
                     transform: translate(0, -50%);
                 }
             }

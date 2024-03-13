@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import CustomAlert from '../../components/CustomAlert';
 
-// getbootstrap alerts / modal fixa för VG (istället för den fula popup typ "success")
-// https://getbootstrap.com/docs/4.0/components/alerts/
-// https://getbootstrap.com/docs/4.0/components/modal/
-
 const ContactUsTop = () => {
   const [showCustomAlert, setShowCustomAlert] = useState(false);
   const [customAlertConfig, setCustomAlertConfig] = useState({ message: '', type: '' });
@@ -110,12 +106,12 @@ const ContactUsTop = () => {
 
   return (
     <div className="container">
-      {showCustomAlert && (
-        <CustomAlert
-          config={customAlertConfig}
-          onClose={() => setShowCustomAlert(false)}
-        />
-      )}
+        {showCustomAlert && (
+          <CustomAlert
+            config={customAlertConfig}
+            onClose={() => setShowCustomAlert(false)}
+          />
+        )}
       <div className="location">
         <p>
           <Link className='house-text' to='/'><i className="fa-regular fa-house"></i> Home</Link>
@@ -126,21 +122,21 @@ const ContactUsTop = () => {
       <div className="contact-us">
         <div>
           <h1>Contact Us</h1>
-          <div className="contact-item">
-            <i className="fa-regular fa-envelope contact-icon"></i>
-            <div className="contact-text">
-              <h2>Email us</h2>
-              <p>Please feel free to drop us a line. We will <span className='break'></span> respond as soon as possible.</p>
-              <Link to="/contact">Leave a message -&gt;</Link>
+            <div className="contact-item">
+              <i className="fa-regular fa-envelope contact-icon"></i>
+              <div className="contact-text">
+                <h2>Email us</h2>
+                <p>Please feel free to drop us a line. We will <span className='break'></span> respond as soon as possible.</p>
+                <Link to="/contact">Leave a message -&gt;</Link>
+              </div>
             </div>
-          </div>
           <div className="contact-item">
             <i className='fa-light fa-user-group contact-icon'></i>
-            <div className="contact-text">
-              <h2>Careers</h2>
-              <p>Sit ac ipsum leo lorem magna nunc mattis <span className='break'></span> maecenas non vestibulum.</p>
-              <Link to="/careers">Send an application -&gt;</Link>
-            </div>
+              <div className="contact-text">
+                <h2>Careers</h2>
+                <p>Sit ac ipsum leo lorem magna nunc mattis <span className='break'></span> maecenas non vestibulum.</p>
+                <Link to="/careers">Send an application -&gt;</Link>
+              </div>
           </div>
         </div>
         <div className="online-consultation">

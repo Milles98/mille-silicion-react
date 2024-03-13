@@ -14,15 +14,13 @@ const NewsDontMissAnything = () => {
     setShowCustomAlert(true);
   };
 
-  // State hooks for each newsletter type
   const [dailyNewsletter, setDailyNewsletter] = useState(false);
   const [eventUpdates, setEventUpdates] = useState(false);
-  const [advertisingUpdates, setAdvertisingUpdates] = useState(true); // Default checked
+  const [advertisingUpdates, setAdvertisingUpdates] = useState(true); 
   const [startupsWeekly, setStartupsWeekly] = useState(false);
   const [weekInReview, setWeekInReview] = useState(false);
   const [podcasts, setPodcasts] = useState(false);
 
-  // onChange handlers for each newsletter type
   const handleCheckboxChange = (setter) => (event) => setter(event.target.checked);
 
   const validateEmail = (email) => {
@@ -62,12 +60,12 @@ const NewsDontMissAnything = () => {
   return (
     <section id="dont-want-to-miss-anything">
       <div className="container">
-      {showCustomAlert && (
-        <CustomAlert
-          config={customAlertConfig}
-          onClose={() => setShowCustomAlert(false)}
-        />
-      )}
+        {showCustomAlert && (
+          <CustomAlert
+            config={customAlertConfig}
+            onClose={() => setShowCustomAlert(false)}
+          />
+        )}
         <div className="header">
           <h1>Don’t Want to Miss Anything?</h1>
           <img src={Arrows} alt="Arrows" />

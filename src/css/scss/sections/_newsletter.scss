@@ -39,7 +39,6 @@
             }
 
             .form-newsletter {
-
                 .error-message {
                     color: $red;
                 }
@@ -85,14 +84,13 @@
                         }
 
                         .error-message {
-                            color: $danger; // Change the color as needed
-                            position: absolute; // Absolute position within the wrapper
-                            bottom: -20px; // Adjust the value to move the message below the input
-                            left: 0; // Align to the left of the wrapper
-                            right: 0; // Align to the right of the wrapper
-                            text-align: center; // Center the error message
+                            color: $danger; 
+                            position: absolute; 
+                            bottom: -20px; 
+                            left: 0;
+                            right: 0;
+                            text-align: center; 
                             @include text-s;
-                            // You can add padding if necessary
                         }
                     }
 

@@ -106,11 +106,9 @@
 
                     .toggleButton {
                         i {
-                            background-color: #F3F6FF; // Default background color
+                            background-color: #F3F6FF; 
                             border-radius: 50%;
-                            // other styling for the icon...
 
-                            // When the card is open, this will change the background of the icon
                             &.fa-chevron-up {
                                 background-color: $primary;
                                 color: white;

@@ -1,6 +1,6 @@
 .footer-home {
     padding: 40px 0;
-    font-family: 'Helvetica Neue', sans-serif; 
+    font-family: $font-manrope;
 
     .container {
         display: flex;
@@ -55,18 +55,6 @@
                 }
             }
         }
-        // .social-links {
-        //     display: flex;
-        //     justify-content: center;
-        //     gap: 20px; 
-        //     font-size: 24px;
-        //     i {
-        //         cursor: pointer;
-        //         &:hover {
-        //             color: #555; 
-        //         }
-        //     }
-        // }
     }
 
     .copyright-text {

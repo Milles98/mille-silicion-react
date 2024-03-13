@@ -1,80 +1,80 @@
-html, body {
-    @include standard-text;
-    font-size: 16px; 
-  }
+// html, body {
+//     @include standard-text;
+//     font-size: 16px; 
+//   }
   
-  .wrapper {
-    display: grid;
-    height: 100dvh;
-    grid-template-rows: auto 1fr auto; 
-  }
-  
-  
-  .text-lead {
-    @include text-lead;
-  }
-  .text-xl {
-    @include text-xl;
-  }
-  .text-lg {
-    @include text-lg;
-  }
-  .text-m {
-    @include text-m;
-  }
-  .text-s {
-    @include text-s;
-  }
-  .text-xs {
-    @include text-xs;
-  }
+//   .wrapper {
+//     display: grid;
+//     height: 100dvh;
+//     grid-template-rows: auto 1fr auto; 
+//   }
   
   
-  // headings
-  h1 {
-    @include h1;
-  }
+//   .text-lead {
+//     @include text-lead;
+//   }
+//   .text-xl {
+//     @include text-xl;
+//   }
+//   .text-lg {
+//     @include text-lg;
+//   }
+//   .text-m {
+//     @include text-m;
+//   }
+//   .text-s {
+//     @include text-s;
+//   }
+//   .text-xs {
+//     @include text-xs;
+//   }
   
-  h2 {
-    @include h2;
-  }
   
-  h3 {
-    @include h3;
-  }
+//   // headings
+//   h1 {
+//     @include h1;
+//   }
   
-  h4 {
-    @include h4;
-  }
+//   h2 {
+//     @include h2;
+//   }
   
-  h5 {
-    @include h5;
-  }
+//   h3 {
+//     @include h3;
+//   }
   
-  h6 {
-    @include h6;
-  }
+//   h4 {
+//     @include h4;
+//   }
   
-  .d1 {
-    @include d1;
-  }
+//   h5 {
+//     @include h5;
+//   }
   
-  .d2 {
-    @include d2;
-  }
+//   h6 {
+//     @include h6;
+//   }
   
-  .d3 {
-    @include d3;
-  }
+//   .d1 {
+//     @include d1;
+//   }
   
-  .d4 {
-    @include d4;
-  }
+//   .d2 {
+//     @include d2;
+//   }
   
-  .d5 {
-    @include d5;
-  }
+//   .d3 {
+//     @include d3;
+//   }
   
-  .d6 {
-    @include d6;
-  }
+//   .d4 {
+//     @include d4;
+//   }
+  
+//   .d5 {
+//     @include d5;
+//   }
+  
+//   .d6 {
+//     @include d6;
+//   }

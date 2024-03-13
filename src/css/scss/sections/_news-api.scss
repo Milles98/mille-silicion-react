@@ -101,13 +101,12 @@
             border-radius: 50%;
             padding: 0.5rem;
             cursor: pointer;
-            width: 2rem; // Set a fixed width
-            height: 2rem; // Set a fixed height to match the width
+            width: 2rem; 
+            height: 2rem; 
             display: flex;
             justify-content: center;
             align-items: center;
-            box-sizing: border-box; // Include padding in width and height
+            box-sizing: border-box; 
         }
-
     }
 }
