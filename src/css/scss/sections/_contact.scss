@@ -309,7 +309,11 @@
             }
 
             .medical-center-bold {
-                margin-left: 23px;
+                margin-left: 0;
+
+                @include lg {
+                    margin-left: 23px;
+                }
             }
 
             h3 {
