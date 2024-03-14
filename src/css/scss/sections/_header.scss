@@ -37,7 +37,8 @@
             position: fixed;
             top: 0;
             left: 0;
-            height: 100vh;
+            right: 0;
+            bottom: 0;
             z-index: 10;
 
             @include lg {
@@ -97,11 +98,11 @@
             background: $transparent;
 
             border: none;
-            color: black; 
+            color: black;
             z-index: 15;
 
             &.toggled {
-                color: white; 
+                color: white;
                 position: fixed;
                 top: 12px;
                 right: 12px;
