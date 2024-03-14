@@ -94,17 +94,17 @@
     }
 
     img {
-      width: 3rem;
-      height: 3rem;
-      margin-right: 10px;
+      width: 4rem;
+      height: 4rem;
+      margin-right: 25px;
+      background: $primary-opacity;
+      border-radius: 15px;
+      padding: 15px;
 
       @include lg {
-        background: $primary-opacity;
         border-radius: 10px;
         padding: 1rem;
         justify-self: start;
-        width: 4rem;
-        height: 4rem;
         margin-right: 15px;
       }
     }
@@ -126,7 +126,11 @@
     p {
       @include text-m;
       grid-row: 2;
-      margin-top: -1.5rem;
+      margin-top: -2rem;
+
+      @include lg {
+        margin-top: -1.5rem;
+      }
     }
 
     row-gap: 0;
